@@ -1,0 +1,14 @@
+[07-Mar-2022 09:50:22 UTC] PHP Warning:  Use of undefined constant APP_NAME - assumed 'APP_NAME' (this will throw an Error in a future version of PHP) in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/config/app.php on line 16
+[07-Mar-2022 09:50:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/config/app.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/config/app.php on line 29
+[07-Mar-2022 09:50:23 UTC] PHP Warning:  Use of undefined constant APP_NAME - assumed 'APP_NAME' (this will throw an Error in a future version of PHP) in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/config/app.php on line 16
+[07-Mar-2022 09:50:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/config/app.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/config/app.php on line 29
+[11-Apr-2023 19:00:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/config/cache.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/config/cache.php on line 20

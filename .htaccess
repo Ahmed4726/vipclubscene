@@ -1,0 +1,52 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# RewriteEngine On 
+# RewriteCond %{SERVER_PORT} 80
+# RewriteCond %{HTTP_HOST} ^(www\.)?vipclubscene\.com
+# RewriteRule ^(.*)$ https://www.vipclubscene.com/ [R,L]
+# RewriteEngine On 
+# RewriteCond %{SERVER_PORT} 80
+# RewriteCond %{HTTP_HOST} ^(www\.)?lillysofmarin\.com
+# RewriteRule ^(.*)$ https://www.lillysofmarin.com/ [R,L]
+# RewriteEngine On 
+# RewriteCond %{SERVER_PORT} 80
+# RewriteCond %{HTTP_HOST} ^(www\.)?kaylanisworld\.com
+# RewriteRule ^(.*)$ https://www.kaylanisworld.com/ [R,L]
+# RewriteEngine On 
+# RewriteCond %{SERVER_PORT} 80
+# RewriteCond %{HTTP_HOST} ^(www\.)?audio111\.com
+# RewriteRule ^(.*)$ https://www.audio111.com/ [R,L]
+# RewriteEngine On 
+# RewriteCond %{SERVER_PORT} 80
+# RewriteCond %{HTTP_HOST} ^(www\.)?affectedgames\.com
+# RewriteRule ^(.*)$ https://www.affectedgames.com/ [R,L]
+
+# RewriteEngine On 
+# RewriteCond %{SERVER_PORT} 80
+# RewriteCond %{HTTP_HOST} ^(login\.)?vipclubscene\.com
+# RewriteRule ^(.*)$ https://login.vipclubscene.com/login.php [R,L]
+
+# RewriteEngine On 
+# RewriteCond %{SERVER_PORT} 80
+# RewriteCond %{HTTP_HOST} ^(world\.)?vipclubscene\.com
+# RewriteRule ^(.*)$ https://world.vipclubscene.com/admin/login [R,L]

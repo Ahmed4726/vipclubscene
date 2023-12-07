@@ -1,0 +1,178 @@
+[2023-10-04 16:00:26] production.ERROR: Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin at /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 {main}
+"} 
+[2023-10-04 16:00:26] production.ERROR: Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin at /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 {main}
+"} 
+[2023-10-04 16:00:26] production.ERROR: Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin at /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 {main}
+"} 
+[2023-10-04 16:00:26] production.ERROR: Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin at /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 {main}
+"} 
+[2023-10-04 16:00:26] production.ERROR: Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin at /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 {main}
+"} 
+[2023-10-04 16:00:26] production.ERROR: Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin at /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 {main}
+"} 
+[2023-10-04 16:00:26] production.ERROR: Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin at /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 {main}
+"} 
+[2023-10-04 16:00:26] production.ERROR: Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught PDOException: SQLSTATE[HY000] [1203] User vip_club_admin already has more than 'max_user_connections' active connections in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illumin at /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 {main}
+"} 
+[2023-10-04 16:00:27] production.ERROR: RecursiveDirectoryIterator::__construct(/home/k9n6iup22po9/public_html/VIPCLUBSCENE/public/uploads/.cache/profilePics/rY7TRnMf5T0S9WssVfWjPQjPpGC5axsV0xxUq0zH.png): failed to open dir: No such file or directory {"userId":73,"exception":"[object] (UnexpectedValueException(code: 0): RecursiveDirectoryIterator::__construct(/home/k9n6iup22po9/public_html/VIPCLUBSCENE/public/uploads/.cache/profilePics/rY7TRnMf5T0S9WssVfWjPQjPpGC5axsV0xxUq0zH.png): failed to open dir: No such file or directory at /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/league/flysystem/src/Adapter/Local.php:484)
+[stacktrace]
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/league/flysystem/src/Adapter/Local.php(484): RecursiveDirectoryIterator->__construct('/home/k9n6iup22...', 4096)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/league/flysystem/src/Adapter/Local.php(410): League\\Flysystem\\Adapter\\Local->getRecursiveDirectoryIterator('/home/k9n6iup22...', 2)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/league/flysystem/src/Filesystem.php(251): League\\Flysystem\\Adapter\\Local->deleteDir('.cache/profileP...')
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/league/glide/src/Server.php(319): League\\Flysystem\\Filesystem->deleteDir('.cache/profileP...')
+#4 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/app/Http/Controllers/ImageController.php(47): League\\Glide\\Server->deleteCache('profilePics/rY7...')
+#5 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\ImageController->picture(Object(Illuminate\\Filesystem\\FilesystemAdapter), 'profilePics/rY7...')
+#6 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('picture', Array)
+#7 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Routing/Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ImageController), 'picture')
+#8 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Routing/Route.php(176): Illuminate\\Routing\\Route->runController()
+#9 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Routing/Router.php(686): Illuminate\\Routing\\Route->run()
+#10 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#11 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/app/Http/Middleware/UserLastAuthMiddleware.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): App\\Http\\Middleware\\UserLastAuthMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/uxweb/sweet-alert/src/SweetAlert/ConvertMessagesIntoSweetAlert.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): UxWeb\\SweetAlert\\ConvertMessagesIntoSweetAlert->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(77): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(56): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Routing/Router.php(688): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#29 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Routing/Router.php(663): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#30 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#31 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Routing/Router.php(618): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#32 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(172): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#33 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(63): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(147): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(112): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#47 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#48 {main}
+"} 
+[2023-10-04 23:26:44] production.ERROR: Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:38
+Stack trace:
+#0 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(38): PDO->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#1 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#2 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=loca...', 'vip_club_admin', '0c84FLs6GFvD', Array)
+#3 /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate at /home/k9n6iup22po9/public_html/VIPCLUBSCENE/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 {main}
+"} 
