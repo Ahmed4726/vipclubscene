@@ -1,3 +1,4 @@
+
 @extends( 'welcome' )
 
 @section('seo_title') #{{ $post->id }} - @endsection

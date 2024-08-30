@@ -112,19 +112,22 @@
 
                 <div v-if="!fileSelectedForUpload">
                 <a class="btn text-muted mt-1" href="javascript:void(0);" @click="attach('Image')">
-                  <h3 class="d-inline"><i class="fas fa-image"></i></h3>
+                  <h3 class="d-inline"> <img v-tooltip="zipUploadTranslated" alt="zip icon" class="post-uploader-icons zip-icon"
+                     src="/svg/Upload-Picture.svg"></h3>
                 </a>
 
                 <a class="mt-1 btn text-muted" href="javascript:void(0);" @click="attach('Video')">
-                  <h3 class="d-inline"><i class="fas fa-video"></i></h3>
+                  <h3 class="d-inline"> <img alt="video icon" class="post-uploader-icons video-icon" src="/svg/video-new-icon.svg"></h3>
                 </a>
 
                 <a class="mt-1 btn text-muted" href="javascript:void(0);" @click="attach('Audio')">
-                  <h3 class="d-inline"><i class="fas fa-music"></i></h3>
+                  <h3 class="d-inline">  <img v-tooltip="audioUploadTranslated" alt="audio icon" class="post-uploader-icons audio-icon"
+                     src="/svg/portable-speaker2.svg"></h3>
                 </a>
 
                 <a class="ml-1 mt-1 mr-2 btn text-muted" href="javascript:void(0);" @click="attach('ZIP')">
-                  <h3 class="d-inline"><i class="fas fa-file-archive"></i></h3>
+                  <h3 class="d-inline"><img v-tooltip="zipUploadTranslated" alt="zip icon" class="post-uploader-icons zip-icon"
+                     src="/svg/zip-upload.svg"></h3>
                 </a>
                 </div>
 

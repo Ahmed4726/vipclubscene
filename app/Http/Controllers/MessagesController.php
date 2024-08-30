@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use App\Notifications\UnlockedMessageNotification;
 use finfo;
+use Illuminate\Support\Facades\Auth;
+
 
 class MessagesController extends Controller
 {
@@ -27,11 +29,25 @@ class MessagesController extends Controller
         $this->middleware('auth', ['except' => ['processPayPalTip', 'coinPaymentsUnlockIPN']]);
     }
 
-    public function inbox()
+   public function inbox()
     {
-        // get this users messages
-        return view('messages.inbox');
+        // Get the authenticated user
+        $authUser = Auth::user();
+        // Retrieve users that are followed by the authenticated user
+        $followedUsers = $authUser->followings()->with('profile')->get();
+        // Generate secure image URLs for each followed user
+        $userImages = $followedUsers->map(function ($usr) {
+            return [
+                'id' => $usr->id,
+                'name' => $usr->name,
+                'secureImageUrl' => secure_image($usr->profile->profilePic, 150, 150),
+            ];
+        });
+        // dd($userImages);
+        // Pass the secure image URLs to the view
+        return view('messages.inbox', ['userImages' => $userImages]);
     }
+
 
     // get recipients for user
     public function getRecipientsForUser()

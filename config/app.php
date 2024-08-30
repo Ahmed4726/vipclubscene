@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => APP_DEBUG,
+    'debug' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Los_Angeles',
 
     /*
     |--------------------------------------------------------------------------
@@ -121,7 +121,12 @@ return [
 
     'key' => APP_KEY,
     'cipher' => 'AES-256-CBC',
-
+    'credentials' => [
+        'key'    => env('AWS_ACCESS_KEY_ID'),
+        'secret' => env('AWS_SECRET_ACCESS_KEY'),
+    ],
+    'region' => env('AWS_DEFAULT_REGION', 'us-west-2'),
+    'version' => 'latest',
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

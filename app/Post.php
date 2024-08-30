@@ -67,7 +67,7 @@ class Post extends Model
 
 		return false;
 	}
-
+	//count views
 	// get video url
 	public function getVideoUrlAttribute()
 	{
@@ -75,6 +75,7 @@ class Post extends Model
 		// return asset('public/uploads') . '/' . $this->media_content;
 	}
 
+    
 	// get audio url
 	public function getAudioUrlAttribute()
 	{

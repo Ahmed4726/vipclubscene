@@ -26,4 +26,11 @@ class BrowseCreators extends Controller
 
         return view('creators.browse', compact('category'));
     }
+    
+    public function showProfile($profileId)
+{
+    $profile = Profile::findOrFail($profileId); // Example of fetching a profile
+    return view('creators.browse', compact('profile'));
+}
+
 }

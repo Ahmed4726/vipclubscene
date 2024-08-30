@@ -10,6 +10,33 @@ use BeyondCode\Comments\Comment;
 class CommentsController extends Controller
 {
 
+	public function loadComment(Post $post)
+	{
+		if (!auth()->check()) {
+			return response()->json(['view' => route('login'), 'lastId' => 0]);
+		}
+	
+		$comments = $post->comments()->with('commentable', 'commentator')
+						->orderBy('id', 'DESC')
+						->take(opt('commentsPerPost', 5))
+						->get();
+	
+		// Manually build the HTML for the comments
+		$html = '';
+	
+		foreach ($comments as $comment) {
+			$html .= '<div class="comment" id="comment-' . $comment->id . '">';
+			$html .= '<p>' . e($comment->commentator->name).':'. ' ' . e($comment->comment) . '  ' . '<small>' . '( ' . $comment->created_at->diffForHumans() . '</small>' . ' )' .'</p>';
+			$html .= '</div>';
+		}
+	
+		// Get the ID of the last comment (for pagination or loading more comments)
+		$lastId = $comments->last() ? $comments->last()->id : 0;
+	
+		return response()->json(['view' => $html, 'lastId' => $lastId]);
+	}
+	
+
 	public function loadForPost(Post $post, $lastId = null)
 	{
 

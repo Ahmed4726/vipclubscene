@@ -14,9 +14,34 @@
 		{{ $comment->commentator->name }}
 	</a> <small class="text-secondary">{{ $comment->created_at->diffForHumans() }}</small><br>
 
-	<div class="text-wrap comment-content mt-1" data-id="{{  $comment->id }}" data-post="{{  $comment->commentable->id }}">
-		{{ $comment->comment }}
-	</div>
+<div class="text-wrap comment-content mt-1" data-id="{{ $comment->id }}" data-post="{{ $comment->commentable->id }}">
+    {!! clean(turnLinksIntoAtags(
+        preg_replace_callback(
+            '/(@\w+|#\w+)/',
+            function($matches) {
+                $match = $matches[0];
+                if ($match[0] === '@') {
+                    $username = substr($match, 1);
+                    return "<a href='/{$username}'>{$match}</a>";
+                } elseif ($match[0] === '#') {
+                    $hashtag = substr($match, 1);
+                    return "<a href='/hashtags/{$hashtag}'>{$match}</a>";
+                }
+            },
+            nl2br(
+                preg_replace_callback(
+                    '/<iframe[^>]*src="https:\/\/www\.youtube\.com\/embed\/([a-zA-Z0-9_-]+)"[^>]*><\/iframe>/',
+                    function($matches) {
+                        return $matches[0]; // Return the iframe HTML
+                    },
+                    $comment->comment
+                )
+            )
+        )
+    ), 'youtube') !!}
+</div>
+
+
 	<div class="comment-form" data-id="{{  $comment->id }}" data-post="{{  $comment->commentable->id }}"></div>
 
 	@if( auth()->check() AND auth()->id() == $comment->user_id )

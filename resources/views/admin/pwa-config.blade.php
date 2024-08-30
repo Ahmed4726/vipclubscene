@@ -21,7 +21,7 @@
 
 <div class="row">
     <div class="col-xs-12 col-md-4">
-        <strong>PWA App ShortName (ie. FansApp)</strong>
+        <strong>VIP Club Scene</strong>
         <input type="text" name="laravel_short_pwa" value="{{ opt('laravel_short_pwa', 'FansApp') }}" class="form-control"/>
     </div>
 </div>

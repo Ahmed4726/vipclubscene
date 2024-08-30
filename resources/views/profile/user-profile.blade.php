@@ -30,7 +30,7 @@
 			</a>
 			<br><br>
 
-			<i class="far fa-grin-stars mr-1"></i> {{ $profile->fans_count }} 
+			<i class="far fa-grin-stars mr-1"></i> {!! $audiance !!} 
 			<!--Audiance-->
 			@lang('general.paid-fans')
 			<br>
@@ -40,12 +40,22 @@
 			@lang('general.free-subscribers')
 			<br>
 
-			<i class="fas fa-align-left" data-toggle="tooltip" title="Total Posts"></i> {{ $profile->posts->count() }} &nbsp;
-			<i class="fas fa-image" data-toggle="tooltip" title="Images"></i> {{ $profile->posts->where('media_type', 'Image')->count() }} &nbsp;
-			<i class="fas fa-music" data-toggle="tooltip" title="Audios"></i> {{ $profile->posts->where('media_type', 'Audio')->count() }} &nbsp;
-			<i class="fas fa-video" data-toggle="tooltip" title="Videos"></i> {{ $profile->posts->where('media_type', 'Video')->count() }} 
+			<!--<i class="fas fa-align-left" data-toggle="tooltip" title="Total Posts"></i> {{ $profile->posts->count() }} &nbsp;-->
+			<img alt="photo icon" data-toggle="tooltip" title="Total Posts" src="/svg/Activity.svg" style="width:20px"> {{ $profile->posts->count() }} &nbsp;
+			<img alt="photo icon" data-toggle="tooltip" title="Images" class="post-uploader-icons photo-icon" src="/svg/Upload-Picture.svg">
+			 {{ $profile->posts->where('media_type', 'Image')->count() }} &nbsp;
+			 <img v-tooltip="audioUploadTranslated" data-toggle="tooltip" title="Audios" alt="audio icon" class="post-uploader-icons audio-icon"
+                     src="/svg/portable-speaker2.svg">
+			 {{ $profile->posts->where('media_type', 'Audio')->count() }} &nbsp;
+			<img alt="video icon" data-toggle="tooltip" title="Videos" class="post-uploader-icons video-icon" src="/svg/video-new-icon.svg">
+		{{ $profile->posts->where('media_type', 'Video')->count() }} 
 		</div>
-
+		@if($profile->is_live == 1)
+		<a href="/join-live?playback_url={{ urlencode($profile->playback_url) }}" class="btn btn-danger">
+			Join Live
+		</a>
+		
+		@endif
 		<div class="col-12 col-sm-6">
 
 			<h4 class="profile-name mb-3">

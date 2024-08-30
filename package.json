@@ -1,5 +1,6 @@
 {
     "dependencies": {
+        "amazon-ivs-web-broadcast": "^1.14.0",
         "axios": "^0.21.4",
         "core-js": "^3.14.0",
         "style-loader": "^2.0.0",

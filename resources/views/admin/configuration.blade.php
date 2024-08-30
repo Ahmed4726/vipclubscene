@@ -155,7 +155,7 @@
 			<dd><input type="text" name="header_fcolor" value="{{ opt('header_fcolor', '#FFFFFF') }}" class="form-control" data-jscolor=""></dd>
 			<br>
 			<dt>Red Button Background</dt>
-			<dd><input type="text" name="red_btn_bg" value="{{ opt('red_btn_bg', '#dc3545') }}" class="form-control" data-jscolor=""></dd>
+			<dd><input type="text" name="red_btn_bg" value="{{ opt('red_btn_bg', '#1cb9de') }}" class="form-control" data-jscolor=""></dd>
 			<br>
 			<dt>Red Button Font Color</dt>
 			<dd><input type="text" name="red_btn_font" value="{{ opt('red_btn_font', '#ffffff') }}" class="form-control" data-jscolor=""></dd>

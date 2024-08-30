@@ -2,19 +2,19 @@
 
 return [
 
-    'name' => 'Name',
+    'name' => 'Name (profile)',
     'email' => 'Email',
     'password' => 'Password',
-    'signUpText' => 'Create your account in seconds',
+    'signUpText' => 'Open Account – Instantly!',
     'confirmPassword' => 'Confirm Password',
 
-    'resetPassword' => 'Reset password',
-    'resetPasswordText' => 'Forgot your password? Reset it now',
+    'resetPassword' => 'Reset Password',
+    'resetPasswordText' => 'Can\'t remember your password?',
 
-    'signInText' => 'Sign in to your account',
-    'rememberMe' => 'Remember me',
-    'login' => 'Login',
-    'forgotPassword' => 'Forgot your password?',
+    'signInText' => 'Authenticate to proceed',
+    'rememberMe' => 'Check box for express entry.',
+    'login' => 'Enter',
+    'forgotPassword' => 'What\'s my password?',
 
 
 

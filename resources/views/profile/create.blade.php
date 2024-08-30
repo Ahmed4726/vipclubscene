@@ -113,8 +113,8 @@
 <input type="text" name="fbUrl" placeholder="https://facebook.com" class="form-control" value="@if(isset($p)){{ $p->fbUrl }}@endif">
 <label><strong>Instagram</strong></label>
 <input type="text" name="instaUrl" placeholder="https://instagram.com" class="form-control" value="@if(isset($p)){{ $p->instaUrl }}@endif">
-<label><strong>Twitter</strong></label>
-<input type="text" name="twUrl" placeholder="https://twitter.com" class="form-control" value="@if(isset($p)){{ $p->twUrl }}@endif">
+<label><strong>X</strong></label>
+<input type="text" name="twUrl" placeholder="https://x.com" class="form-control" value="@if(isset($p)){{ $p->twUrl }}@endif">
 <label><strong>Youtube</strong></label>
 <input type="text" name="ytUrl" placeholder="https://youtube.com" class="form-control" value="@if(isset($p)){{ $p->ytUrl }}@endif">
 <label><strong>Twitch</strong></label>

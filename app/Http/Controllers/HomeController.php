@@ -8,6 +8,7 @@ use App\Mail\NewContentReportMail;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Artisan;
 
 class HomeController extends Controller
 {
@@ -15,7 +16,13 @@ class HomeController extends Controller
     // GET /
     public function index()
     {
-        
+        Artisan::call('cache:clear');
+        Artisan::call('config:clear');
+        Artisan::call('view:clear');
+        Artisan::call('optimize:clear');
+         Artisan::call('config:cache');
+         Artisan::call('route:clear');
+
         // lock homepage for guests?
         if(!auth()->check() AND opt('lock_homepage', 'No') == 'Yes')
             return redirect('login');

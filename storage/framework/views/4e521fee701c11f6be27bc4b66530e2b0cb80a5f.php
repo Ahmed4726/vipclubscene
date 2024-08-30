@@ -1,1 +1,0 @@
-<input type="text" name="update-comment-<?php echo e($comment->id); ?>" class="form-control update-comment-inp"  required="required" data-id="<?php echo e($comment->id); ?>" value="<?php echo e($comment->comment); ?>"><?php /**PATH /home/k9n6iup22po9/public_html/VIPCLUBSCENE/resources/views/posts/edit-comment.blade.php ENDPATH**/ ?>

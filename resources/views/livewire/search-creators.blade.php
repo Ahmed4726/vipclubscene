@@ -1,6 +1,6 @@
 <div>
     <div class="p-relative">
-        <input class="form-control search-topnavi mt-2 mr-sm-2 @if(auth()->guest()) search-guest @else search-logged-in @endif" type="search" placeholder="@lang('general.searchCreator')" aria-label="Search" wire:model.debounce.200ms="search">
+        <input class="form-control search-topnavi mt-2 mr-sm-2 " type="search" placeholder="@lang('general.searchCreator')" aria-label="Search" wire:model.debounce.200ms="search">
         <div class="search-spinner" wire:loading>
             <i class="fas fa-spinner fa-spin"></i>
         </div>

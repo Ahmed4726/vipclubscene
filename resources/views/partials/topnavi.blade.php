@@ -1,4 +1,36 @@
+
+<style>
+    /* Hover effect for navbar links */
+    .menu_sec li a:hover {
+        color: #1cb9de; /* Change to your desired hover color */
+    }
+
+    /* Hover effect for icons */
+    .menu_sec li a:hover i {
+        color: #1cb9de; /* Change to your desired hover color */
+    }
+    @media (max-width: 480px) {
+        .search-creators-mobile {
+            display: block; /* Show on small screens */
+        }
+
+        .search-creators-desktop {
+            display: none; /* Hide on small screens */
+        }
+    }
+
+    @media (min-width: 768px) {
+        .search-creators-mobile {
+            display: none; /* Hide on larger screens */
+        }
+
+        .search-creators-desktop {
+            display: block; /* Show on larger screens */
+        }
+    }
+</style>
 <header class="header_sec innerheaders">
+ 
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light nav_top">
 
@@ -24,14 +56,15 @@
                 </button><!-- close navi on mobile -->
 
                 <ul class="navbar-nav menu_sec">
-                    @if( auth()->guest() )
+                   <li> @if( auth()->guest() )</li>
                         <li>
-                            <a href="/">@lang( 'navigation.home' )</a>
+                            <a href="/"><i class="fas fa-door-closed"></i> @lang( 'navigation.home' )</a>
                         </li>
                     @endif
                     @if( !auth()->guest() )
+                    @livewire('search-creators')
                         <li>
-                            <a href="{{ route('feed') }}">@lang('navigation.feed')</a>
+                            <a href="{{ route('feed') }}"><i class="fas fa-book-open"></i> @lang('navigation.feed')</a>
                         </li>
                         <li>
                             @livewire('notifications-icon')
@@ -41,12 +74,12 @@
                         </li>
                         <li>
                             <a href="{{ route('profile.show', ['username' => auth()->user()->profile->username ]) }}">
-                                @lang('navigation.myProfile')
+                                <i class="fas fa-user"></i> @lang('navigation.myProfile')
                             </a>
                         </li>
                         <li>
                             <a href="{{  route('startMyPage') }}">
-                                @lang('navigation.account')
+                               <i class="fas fa-money-bill"></i> @lang('navigation.account')
                                 @if(auth()->user()->profile->isVerified == 'Yes' && auth()->user()->profile->monthlyFee)
                                     <span class="">{{ '(' . opt('payment-settings.currency_symbol') . number_format(auth()->user()->balance,2) . ')' }}</span>
                                 @endif
@@ -54,13 +87,13 @@
                         </li>
                     @endif
                     <li>
-                        <a href="{{ route('browseCreators') }}">@lang('navigation.exploreCreators')</a>
+                        <a href="{{ route('browseCreators') }}"><i class="fas fa-users"></i> @lang('navigation.exploreCreators')</a>
                     </li>
                     @if( auth()->guest() )
                         <li class="d-none d-sm-none d-md-block">
                             <a href="{{ route('register') }}"
                                class="border-white border-radius-account-buttons padding-account-buttons signupButton">
-                                <i class="fas fa-user"></i> @lang('navigation.signUp')
+                                <i class="fas fa-user"></i> <i class="fas fa-key"></i> @lang('navigation.signUp')
                             </a>
                         </li>
                         <li class="d-none d-sm-none d-md-block">
@@ -76,7 +109,14 @@
                             </a>
                         </li>
                     @endif
-                        @livewire('search-creators')
+                    @guest
+                     <li class="search-creators-desktop">
+                    @livewire('search-creators')
+                    </li>
+                    @endguest
+<!--                        <li class="search-creators-mobile">-->
+<!--    @livewire('search-creators')-->
+<!--</li>-->
                 </ul>
                 <ul class="rt_btn d-lg-none d-md-block d-sm-block d-block">
                     @if( auth()->guest() )
@@ -92,6 +132,11 @@
                                 <i class="fas fa-sign-in-alt"></i> @lang('navigation.login')</a>
                         </li>
                     @endif
+                      @guest
+                     <div class="search-creators-mobile mt-2" style="width:100%;">
+                    @livewire('search-creators')
+                    </div>
+                    @endguest
                 </ul>
             </div>
         </nav>

@@ -2,7 +2,8 @@
 
 <h4 class="d-inline">
     <a href="@if(auth()->check()) javascript:void(0); @else {{ route( 'login' ) }} @endif" class="noHover @if(auth()->check()) sendTip @endif text-secondary" data-post="{{ $post->id }}">
-    <i class="fas fa-coins"></i> 
+    <!-- <i class="fas fa-coins"></i>  -->
+    <img alt="tip icon" class="post-uploader-icons" src="/svg/tip_top.svg">
         <small><small>@lang('general.tip')</small></small>
     </a>
 </h4>

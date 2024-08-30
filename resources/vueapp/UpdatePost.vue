@@ -18,36 +18,39 @@
             <div class="col-12 col-sm-12 col-md-8">
 
               <a v-tooltip="imageUploadTranslated" class="text-333" href="javascript:void(0)" @click="selectPhotos">
-                <img alt="photo icon" class="post-uploader-icons photo-icon" src="/svg/photo-icon.svg">
+                <img alt="photo icon" class="post-uploader-icons photo-icon" src="/svg/Upload-Picture.svg">
               </a>
 
               <a v-tooltip="videoUploadTranslated" class="text-333" href="javascript:void(0)"
                  @click="selectMedia('Video')">
-                <img alt="video icon" class="post-uploader-icons video-icon" src="/svg/video-icon.svg">
+                <img alt="video icon" class="post-uploader-icons video-icon" src="/svg/video-new-icon.svg">
               </a>
 
               <a href="javascript:void(0)" @click="selectMedia('Audio')">
                 <img v-tooltip="audioUploadTranslated" alt="audio icon" class="post-uploader-icons audio-icon"
-                     src="/svg/audio-icon.svg">
+                     src="/svg/portable-speaker2.svg">
               </a>
 
               <a href="javascript:void(0)" @click="selectMedia('ZIP')">
                 <img v-tooltip="zipUploadTranslated" alt="zip icon" class="post-uploader-icons zip-icon"
-                     src="/svg/zip-icon.svg">
+                     src="/svg/zip-upload.svg">
               </a>
 
               <a v-if="postLockType === 'Paid'" ref="paidPostLockIcon" class="text-333"
                  href="javascript:void(0)" @click="changePostLockType">
-                <img alt="locked icon" class="post-uploader-icons lock-closed-icon" src="/svg/lock-closed-icon.svg">
+                <img alt="locked icon" class="post-uploader-icons lock-closed-icon" src="/svg/Locked.svg">
                 {{ paidPostTranslated }}
               </a>
 
               <a v-if="postLockType === 'Free'" ref="freePostLockIcon" class="text-333"
                  href="javascript:void(0)" @click="changePostLockType">
-                <img alt="unlocked icon" class="post-uploader-icons lock-open-icon" src="/svg/lock-open-icon.svg">
+                <img alt="unlocked icon" class="post-uploader-icons lock-open-icon" src="/svg/Unlocked.svg">
                 {{ freePostTranslated }}
               </a>
-
+              <a class="twitter-share-button" href="https://x.com/">
+                <img alt="zip icon" class="post-uploader-icons zip-icon"
+                     src="/svg/X_logo_2023.svg">
+              </a>
               <input ref="imageUploads" accept="image/*" class="d-none" multiple type="file" @change="appendPhotos">
               <input ref="videoUploads" accept="video/mp4,video/webm,video/ogg,video/quicktime" class="d-none" type="file" @change="appendMedia">
               <input ref="audioUploads" accept="audio/mp3,audio/ogg,audio/wav" class="d-none" type="file" @change="appendMedia">

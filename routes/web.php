@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\StreamController;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Process\Process;
+use Symfony\Component\Process\Exception\ProcessFailedException;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::view('/test','test');
 
 // Authentication Routes
 Auth::routes();
@@ -39,6 +43,7 @@ Route::post('profile/process-verification', 'ProfileController@processVerificati
 Route::get('profile/settings', 'ProfileController@accountSettings')->name('accountSettings');
 Route::post('profile/save-settings', 'ProfileController@saveAccountSettings')->name('saveAccountSettings');
 Route::post('profile/follow/{user}', 'ProfileController@followUser')->name('followUser');
+Route::post('profile/toggleFollow/{user}', 'ProfileController@toggleFollow1')->name('follow-Unfollow');
 Route::get('profile/my-subscribers', 'ProfileController@mySubscribers')->name('mySubscribers');
 Route::get('profile/my-subscriptions', 'ProfileController@mySubscriptions')->name('mySubscriptions');
 Route::get('feed/loadMore/{profile}/{lastId}', 'ProfileController@ajaxFeedForProfile')->name('loadPostsForProfile');
@@ -117,13 +122,58 @@ Route::get('activity/download-zip/{post}', 'PostsController@downloadZip')->name(
 Route::post('post/attach-media/{post}', 'PostsController@attachMedia')->name('posts.attachMedia');
 Route::get('post/json/{post}', 'PostsController@postJSON')->name('posts.json');
 Route::post('post/vueapp/api', 'PostsController@vueapi')->name('posts.vueapi');
-
+Route::get('post-schedule', 'PostsController@schedulePost')->name('posts.schedule');
 Route::enum('post-enum');
+
+// Repost
+Route::post('/repost/{post}', 'PostsController@repost')->name('repostPost');
+
+//video views count
+Route::post('/posts/{post}/increment-view', 'PostsController@incrementView')->name('posts.incrementView');
+
+//LiveStreaming
+// Route to view the live stream page
+Route::get('/live', 'LiveStreamController@index')->name('live');
+
+// Route to join a specific live stream
+Route::get('/join-live', 'LiveStreamController@joinStream')->name('joinStream');
+
+// Route to fetch the live stream URL for a specific post
+Route::get('/live-stream-url/{post}', 'LiveStreamController@fetchStream')->name('fetchStream');
+
+// Route to start a live stream (post ID required)
+Route::post('/start-stream/{post}', 'LiveStreamController@startStream')->name('startStream');
+
+// Route to end a live stream (post ID required)
+Route::post('/end-stream/{post}', 'LiveStreamController@endStream')->name('endStream');
+// Route to get the live viewer count for a specific post
+Route::get('/live-viewer-count/{post}', 'LiveStreamController@getViewerCount')->name('getViewerCount');
+Route::get('/stream-config', 'LiveStreamController@getStreamConfig')->name('getStreamConfig');
+
+Route::get('/ivs/videos', 'StreamController@listVideos');
+
+// Hashtags
+Route::get('/hashtags/{hashtags}', 'PostsController@hashtags')->name('hashtags');
+
+Route::get('/stream/create', 'LiveStreamController@createStream');
+Route::get('/stream/{channelArn}', 'LiveStreamController@getStream');
+
+
+Route::get('/get-ivs-config', 'IvsController@getIvsConfig');
+Route::post('/start-live', 'IvsController@start_live');
+Route::get('/end-live', 'IvsController@end_live');
+
+
+Route::get('/t1', function(){
+    // dd('ok');
+    return view('test');
+});
 
 // Likes
 Route::post('like/{post}', 'LikeController@like')->name('likePost');
 
 // Comments
+Route::get('comment/{post}', 'CommentsController@loadComment')->name('loadComments');
 Route::get('comments/{post}/{lastId?}', 'CommentsController@loadForPost')->name('loadCommentsForPost');
 Route::post('comment/{post}', 'CommentsController@postComment')->name('postComment');
 Route::get('comment/load/{comment}/{post}', 'CommentsController@loadCommentById')->name('loadCommentById');
@@ -272,7 +322,6 @@ Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function (
     Route::post('admin/simulator-store-config', 'Admin@saveSimulatorConfig');
 
 });
-
 // User Routes
 Route::get('toprofile/{user_id}', function ($user_id) {
     $username = App\Profile::where('user_id', $user_id)->pluck('username')->first();
@@ -281,3 +330,6 @@ Route::get('toprofile/{user_id}', function ($user_id) {
 })->name('profile.redirect');
 
 Route::any('{username}', 'ProfileController@showProfile')->name('profile.show');
+
+
+

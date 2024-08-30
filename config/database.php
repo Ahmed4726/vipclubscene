@@ -42,11 +42,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => DATABASE_HOST,
+            'host' => env('DATABASE_HOST','localhost'),
             'port' => '3306',
-            'database' => DATABASE_NAME,
-            'username' => DATABASE_USER,
-            'password' => DATABASE_PASS,
+            'database' => env('DATABASE_NAME','vipcs_club_scene'),
+            'username' => env('DATABASE_USER','root'),
+            'password' => env('DATABASE_PASS',''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',

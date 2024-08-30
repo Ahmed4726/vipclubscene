@@ -3,7 +3,7 @@
 @section('seo_title') @lang('homepage.browseCreators') - @endsection
 
 @section( 'content' )
-<div class="white-smoke-bg">
+<div class="">
 <br/>
 
 <div class="container pt-3 pb-5">

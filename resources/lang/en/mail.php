@@ -8,5 +8,5 @@ return [
     'paymentActionRequired' => 'Payment needs your review!',
     'creatorPaidSubscriber' => 'Congrats, you have a new paid subscriber!',
     'verificationRequested' => 'Profile Verification Requested!',
-    'tipReceivedMail' => 'You have a received a tip!'
+    'tipReceivedMail' => 'You have received a tip!'
 ];

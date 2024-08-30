@@ -12,6 +12,9 @@ use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Mail\VerificationRequestedEmail;
+use Illuminate\Support\Facades\DB;
+use Overtrue\LaravelFollow\Events\Followed;
+use Auth;
 
 class ProfileController extends Controller
 {
@@ -48,18 +51,23 @@ class ProfileController extends Controller
                 $q->where('subscriptions.subscription_expires', '>=', now());
             }])
             ->firstOrFail();
-
+// dd();
         // find posts for this handle
+         $perPage = 30; // Number of items to show per page
+
+        // Fetch posts with related profile data
         $feed = $profile->posts()
             ->with(['profile' => function ($q) use ($profileFields) {
                 $q->select($profileFields);
             }])
             ->orderBy('posts.id', 'DESC')
-            ->take(opt('feedPerPage', 10))
-            ->get();
-
-
-        return view('profile/user-profile', compact('profile', 'feed'));
+            ->paginate($perPage);
+            
+            $audiance = DB::table('user_follower')
+                            ->where('follower_id', $profile->user_id )
+                            ->count('following_id');
+                // dd($audiance);
+        return view('profile/user-profile', compact('profile', 'feed', 'audiance'));
     }
 
     public function ajaxFeedForProfile(Profile $profile, $lastId = null)
@@ -472,6 +480,30 @@ class ProfileController extends Controller
             'app'
         ];
 
+    }
+
+
+    public function toggleFollow1($profileId)
+    {
+        if (!Auth::check()) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $profile = Profile::findOrFail($profileId);
+
+        if (Auth::user()->id != $profile->user_id) {
+            $follow = Auth::user()->toggleFollow($profile->user);
+
+            if (!is_null($follow)) {
+                event(new Followed($follow));
+            }
+
+            return response()->json([
+                'isFollowing' => Auth::user()->isFollowing($profile->user->id),
+            ]);
+        } else {
+            return response()->json(['error' => __('profile.followSelf')], 403);
+        }
     }
 
     // my billing

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use League\Glide\Urls\UrlBuilderFactory;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,20 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::get('/secure-image', function (Request $request) {
+    // dd('ok');
+    $image = $request->query('image');
+    $width = $request->query('width');
+    $height = $request->query('height');
+    
+    // Get security key
+    $signkey = env('APP_KEY');
+
+    // Build URL
+    $urlBuilder = UrlBuilderFactory::create('usermedia', $signkey);
+    $url = $urlBuilder->getUrl($image, ['w' => $width, 'h' => $height, 'fit' => 'crop']);
+
+    return response()->json(['url' => $url]);
 });

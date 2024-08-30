@@ -11,5 +11,5 @@ return [
     'transferDetails' => 'Transfer details',
     'ifTransfer' => 'Crypto address + coin if Crypto',
     'update' => 'Update',
-    'processingUpload' => 'Processing upload..'
+    'processingUpload' => 'Processing upload...'
 ];

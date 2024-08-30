@@ -105,7 +105,7 @@ class User extends Authenticatable implements Commentator
             'id', 'name', 'user_id', 'username', 'creating', 'profilePic',
             'coverPic', 'isVerified', 'isFeatured',
             'fbUrl', 'twUrl', 'ytUrl', 'twUrl', 'ytUrl', 'twitchUrl', 'instaUrl',
-            'monthlyFee', 'minTip', 'discountedFee'
+            'monthlyFee', 'minTip', 'discountedFee', 'is_live', 'playback_url'
         ];
 
         // get posts 

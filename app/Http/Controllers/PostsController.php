@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\MessageMedia;
 use App\Post;
+use App\Profile;
 use finfo;
 use Illuminate\Http\File;
 use Illuminate\Http\Request;
@@ -31,7 +32,13 @@ class PostsController extends Controller
     {
         return view('posts.one', compact('post'));
     }
-
+    
+     //schedule posts
+    public function schedulePost()
+    {
+        return view('posts.scheduleposts');
+    }
+    
     // GET /feed
     public function feed()
     {
@@ -49,7 +56,16 @@ class PostsController extends Controller
 
         return view('user-feed', compact('feed'));
     }
+    
+    //count video views
+ public function incrementView(Request $request, Post $post)
+{
+    // Increment the views count
+    $post->increment('views');
 
+    return response()->json(['success' => true, 'views' => $post->views]);
+}
+    
     // edit post
     public function editPost(Post $post)
     {
@@ -69,7 +85,7 @@ class PostsController extends Controller
             abort(403);
 
         $this->validate($r, [
-            'text_content' => 'required|min:2',
+            'text_content' => 'required|min:1',
             'lock_type' => 'required|in:Free,Paid,free,paid'
         ]);
 
@@ -215,7 +231,7 @@ class PostsController extends Controller
     {
 
         $this->validate($r, [
-            'text_content' => 'required|min:2',
+            // 'text_content' => 'required|min:1',
             'lock_type' => 'required|in:Free,Paid,free,paid'
         ]);
 
@@ -234,13 +250,24 @@ class PostsController extends Controller
         $post->text_content = $r->text_content;
         $post->lock_type = $r->lock_type;
         $post->user_id = auth()->user()->id;
+        $post->schedule_post = $r->schedule_post;
+        if($r->schedule_post != null){
+            $post->status = 'invisible';
+             $message = 'Post scheduled successfully but is currently invisible.';
+        }else {
+        $message = 'Post created successfully.';
+    }
         $post->profile_id = auth()->user()->profile->id;
         $post->save();
 
         // make event to listen to 
         event(new PostCreatedOrUpdatedEvent($post));
 
-        return response()->json(['result' => true, 'post' => $post->id]);
+        return response()->json([
+        'result' => true,
+        'post' => $post->id,
+        'message' => $message,
+    ]);
     }
 
     // attach photos
@@ -618,4 +645,50 @@ class PostsController extends Controller
         
         return redirect($r->url);
     }
+    
+    
+    
+    public function hashtags($hashtags)
+    {
+        $posts = Post::where('text_content', 'like', '#'.$hashtags. ' ')
+                        ->orWhere('text_content', 'like', '#'.$hashtags. ' %')
+                        ->orWhere('text_content', 'like','% ' .'#'.$hashtags)
+                        ->orWhere('text_content', 'like', '#'.$hashtags)
+                        ->get();
+                        // dd($post);
+         return view('posts.hashtag', compact('posts'));
+    }
+    
+    public function repost(Post $post)
+    {
+        $profile = $post->profile_id;
+        $username = Profile::where('id',$profile)->select('username')->first();
+        
+        $newPost = $post->replicate();
+        $newPost->user_id = auth()->user()->id;
+        $newPost->profile_id = auth()->user()->profile->id;
+        $newPost->profile_handle = $username->username;
+        $newPost->created_at = now();
+        $newPost->updated_at = now();
+        $newPost->is_Posted = 1;
+        $newPost->save();
+    
+        // Dispatch the event if needed
+        event(new PostCreatedOrUpdatedEvent($newPost));
+        
+    
+        return redirect()->back()->with('success', 'Post successfully reposted.');
+    }
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

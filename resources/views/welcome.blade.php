@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="VIP Club Scene" content="WELCOME TO OUR WORLD">
+    <meta name="VIP Club Scene" content="Social Networking, Connect Online, Make Friends Online, Online Community, Professional Networking, Photo Sharing, Video Sharing, Social Media App, Messaging, Event Planning, Group Discussions, Privacy-Focused Social Network, Local Communities, Interest-Based Networks, Follow Trends, Influencer Platform, Content Creation Tools, Live Streaming, Virtual Events, Social Media Marketing">
     <link rel="shortcut icon" type="image/png" href="{{ asset(opt('favicon', 'favicon.png')) }}" sizes="128x128" />
     <meta name="_token" content="{{ csrf_token() }}" />
 
@@ -20,11 +20,11 @@
     <link rel="manifest" href="{{ route('pwa-manifest') }}">
     <meta name="theme-color" content="{{ config('pwa.manifest.theme_color') }}">
     <meta name="mobile-web-app-capable" content="{{ config('pwa.manifest.display') == 'standalone' ? 'yes' : 'no' }}">
-    <meta name="application-name" content="{{ opt('laravel_short_pwa', 'FansApp') }}">
+    <meta name="application-name" content="{{ opt('laravel_short_pwa', 'VIPClubSceneApp') }}">
     <link rel="icon" sizes="512x512" href="/{{ cache()->has('pwa_512x512') ? cache()->get('pwa_512x512') : opt('pwa_512x512', config('pwa.manifest.icons.512x512.path')) }}">
     <meta name="apple-mobile-web-app-capable" content="{{ config('pwa.manifest.display') == 'standalone' ? 'yes' : 'no' }}">
     <meta name="apple-mobile-web-app-status-bar-style" content="{{  config('pwa.manifest.status_bar') }}">
-    <meta name="apple-mobile-web-app-title" content="{{ opt('laravel_short_pwa', 'FansApp') }}">
+    <meta name="apple-mobile-web-app-title" content="{{ opt('laravel_short_pwa', 'VIPClubSceneApp') }}">
     <link rel="apple-touch-icon" href="/{{ cache()->has('pwa_512x512') ? cache()->get('pwa_512x512') : opt('pwa_512x512', config('pwa.manifest.icons.512x512.path')) }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
     <link href="/{{ cache()->has('pwa_72x72') ? cache()->get('pwa_72x72') : opt('pwa_72x72', config('pwa.manifest.splash.640x1136')) }}" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
@@ -200,11 +200,11 @@
         window.cookieconsent.initialise({
           "palette": {
             "popup": {
-              "background": "#edeff5",
+              "background": "#000033",
               "text": "#838391"
             },
             "button": {
-              "background": "#4b81e8"
+              "background": "#000033"
             }
           },
           "content": {
@@ -239,6 +239,12 @@
         
     </script>
     @endif
+    
+    @if (isset($message))
+    <script type="text/javascript">
+        swal({ title: '', icon: 'success', text: '{{ $message }}' });
+    </script>
+@endif
 
     @if(opt('site_entry_popup', 'No') == 'Yes' AND !request()->cookie('entryConfirmed'))
     <script>
