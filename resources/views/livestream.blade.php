@@ -217,6 +217,7 @@ async function initializeDeviceSelect() {
       device.deviceId
     );
   });
+  audioSelectEl.selectedIndex = 1;
 }
 
 async function getCamera(deviceId, maxWidth, maxHeight) {

@@ -34,8 +34,8 @@ class LiveStreamController extends Controller
     {
         $playback_url = $request->query('playback_url');
         $post_id = $request->query('post_id');
-        $post = Post::where('id', $post_id)->first(); 
-        
+        $post = Post::where('id', $post_id)->first();
+
     
         // dd($playback_url, $post_id); // For debugging, if needed
     

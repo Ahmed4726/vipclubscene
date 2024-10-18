@@ -21,10 +21,15 @@
 				<br>
                 {{-- @dd($post->profile) --}}
                 @if($post->profile->is_live == 1)
-                <a href="/join-live?playback_url={{ urlencode($post->profile->playback_url) }}&post_id={{ $post->id }}" class="btn btn-danger">
-                    Join Live
-                </a>
-                
+                    @if ( $post->userHasAccess() )
+                        <a href="/join-live?playback_url={{ urlencode($post->profile->playback_url) }}&post_id={{ $post->id }}" class="btn btn-danger">
+                            Join Live
+                        </a>
+                    @else
+                        <a href="/join-live?playback_url={{ urlencode($post->profile->playback_url) }}&post_id={{ $post->id }}" class="btn btn-danger">
+                            Join Exculusive Live
+                        </a>
+                    @endif
                 @endif
 				<span class="d-block d-sm-block d-md-none">
 					<span class="text-muted">
@@ -245,8 +250,9 @@
                      src="/svg/Writing.svg" style="width:100px; height:100px">
 		@elseif($post->media_type == 'Image')
 			 <img alt="photo icon" class="post-uploader-icons photo-icon" src="/svg/Upload-Picture.svg" style="width:100px; height:100px">
-		@elseif($post->media_type == 'Video')
+		@elseif($post->media_type == 'Video' || $post->media_type == 'live')
 			<img alt="video icon" class="post-uploader-icons video-icon" src="/svg/video-new-icon.svg" style="width:100px; height:100px">
+            @elseif($post->media_type == 'live')
 		@elseif($post->media_type == 'Audio')
 			                <img v-tooltip="audioUploadTranslated" alt="audio icon" class="post-uploader-icons audio-icon" style="width:100px; height:100px">
 
@@ -363,7 +369,12 @@ function toggleText(postId) {
 }
 
 //video count JS code
-
+fetch('/end-live')
+.then(response => response.json())
+.then(data => {
+    data.message;
+})
+.catch(error => setError(error.toString()));
 </script>
 
 

@@ -4,14 +4,13 @@
 
 
 
-<head>
-  <meta charset="UTF-8" />
+{{-- <head> --}}
+  {{-- <meta charset="UTF-8" />
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IVS Live Stream Playback</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css" />
+  <title>IVS Live Stream Playback</title> --}}
+
   <style>
     body {
       display: flex;
@@ -86,13 +85,18 @@
   margin-bottom: 40px;
 }
   </style>
-</head>
+{{-- </head> --}}
 
 <body>
 <div class="white-smoke-bg pt-4 pb-3">
 <div class="container add-padding">
 <div class="row">
-  <video id="video-player" controls></video>
+  @if ( $post->userHasAccess() )
+    <video id="video-player" controls></video>
+  @else
+  <img alt="video icon" class="post-uploader-icons video-icon" src="/svg/video-new-icon.svg">
+  @endif
+
   <p id="error-message" style="color: red; text-align: center;"></p>
 
   <!-- Live Chat Section -->
